@@ -1,0 +1,8 @@
+{
+  "name": "@bourse-ski/bourse-ski",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "bourse-ski"
+  }
+}
