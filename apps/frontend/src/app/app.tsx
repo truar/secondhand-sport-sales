@@ -1,10 +1,28 @@
 import NxWelcome from './nx-welcome';
 
+import { useState, useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 export function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchAction = async () => {
+      const result = await fetch('/api');
+      if (!result.ok) {
+        return;
+      }
+      const json = await result.json()
+      setData(json)
+    };
+    fetchAction();
+  }, []);
+  
+  if(!data) return 
+
   return (
     <div>
+      <div>{data.message}</div>
       <NxWelcome title="bourse-ski" />
 
       {/* START: routes */}
