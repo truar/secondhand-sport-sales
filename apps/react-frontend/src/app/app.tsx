@@ -12,18 +12,18 @@ export function App() {
       if (!result.ok) {
         return;
       }
-      const json = await result.json()
-      setData(json)
+      const json = await result.json();
+      setData(json);
     };
     fetchAction();
   }, []);
-  
-  if(!data) return 
+
+  if (!data) return;
 
   return (
     <div>
       <div>{data.message}</div>
-      <NxWelcome title="bourse-ski" />
+      <NxWelcome title="Secondhand sport sales" />
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
