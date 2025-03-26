@@ -43,3 +43,10 @@ Thumbs.db
 
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+
+# Following advices on this link https://stackoverflow.com/questions/58550439/am-i-meant-to-commit-yarns-pnp-js-file
+.yarn/unplugged
+.yarn/build-state.yml
+
+.pnp.cjs
+.pnp.loader.mjs
